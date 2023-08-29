@@ -6,15 +6,25 @@ import Logo from "../../assets/Mobile/Logo mobile.png";
 
 const Header = () => {
   return (
-    <header className="flex justify-between items-center bg-black max-w-full py-5 px-5">
-      <Image
-        sizes="100vw"
-        src={Logo}
-        alt="Logo da loja meteora"
-        quality={100}
-      />
+    <header className="flex flex-wrap justify-between items-center bg-black max-w-full md:py-5 md:px-5">
+      <div className="flex justify-between items-center py-5 px-5 md:py-0 md:px-0 w-full sm:w-auto">
+        <Image
+          sizes="100vw"
+          src={Logo}
+          alt="Logo da loja meteora"
+          quality={100}
+        />
 
-      <nav className="hidden sm:block">
+        <Image
+          sizes="100vw"
+          className="sm:hidden"
+          src={Hamburguer}
+          alt="Logo da loja meteora"
+          quality={100}
+        />
+      </div>
+
+      <nav className="hidden md:block">
         <ul className="flex items-center">
           <li className="text-white ml-5 text-sm ">
             <Link href="/">Home</Link>
@@ -31,20 +41,17 @@ const Header = () => {
         </ul>
       </nav>
 
-      <form className="flex items-center justify-end flex-1">
-        <input className="max-w-[145px] h-full py-2.5" type="text" />
-        <button className="text-sm ml-4 h-full py-2.5 px-3 bg-transparent text-white border border-white ">
+      <form className="flex bg-white md:bg-black py-6 px-6 md:px-0 md:py-0 w-full justify-center  items-center md:justify-end md:flex-1 basis-full order-last md:order-[0]">
+        <input
+          placeholder="Digite o produto"
+          className="w-full sm:w-auto pl-4 text-sm border border-black md:border-white focus:border-secondary outline-0 py-2"
+          type="text"
+        />
+
+        <button className="text-sm ml-4 h-full py-2 px-3 bg-transparent text-black md:text-white border border-black md:border-white">
           Buscar
         </button>
       </form>
-
-      <Image
-        sizes="100vw"
-        className="sm:hidden"
-        src={Hamburguer}
-        alt="Logo da loja meteora"
-        quality={100}
-      />
     </header>
   );
 };
