@@ -6,8 +6,8 @@ import Logo from "../../assets/Mobile/Logo mobile.png";
 
 const Header = () => {
   return (
-    <header className="flex flex-wrap justify-between items-center bg-black max-w-full md:py-5 md:px-5">
-      <div className="flex justify-between items-center py-5 px-5 md:py-0 md:px-0 w-full sm:w-auto">
+    <header className="flex flex-wrap md:flex-nowrap justify-between items-center bg-black max-w-full md:py-5 md:px-5">
+      <div className="flex justify-between items-center py-5 px-5 md:py-0 md:px-0 w-full md:w-auto">
         <Image
           sizes="100vw"
           src={Logo}
@@ -17,14 +17,14 @@ const Header = () => {
 
         <Image
           sizes="100vw"
-          className="sm:hidden"
+          className="md:hidden"
           src={Hamburguer}
           alt="Logo da loja meteora"
           quality={100}
         />
       </div>
 
-      <nav className="hidden md:block">
+      <nav className="hidden md:block flex-grow-2">
         <ul className="flex items-center">
           <li className="text-white ml-5 text-sm ">
             <Link href="/">Home</Link>
@@ -41,10 +41,10 @@ const Header = () => {
         </ul>
       </nav>
 
-      <form className="flex bg-white md:bg-black py-6 px-6 md:px-0 md:py-0 w-full justify-center  items-center md:justify-end md:flex-1 basis-full order-last md:order-[0]">
+      <form className="flex bg-white md:bg-black py-6 px-6 md:py-0 md:px-3 lg:px-0 w-full md:w-auto justify-center  items-center md:justify-end md:flex-1 basis-full order-last md:order-[0]">
         <input
           placeholder="Digite o produto"
-          className="w-full sm:w-auto pl-4 text-sm border border-black md:border-white focus:border-secondary outline-0 py-2"
+          className="w-full md:w-[80%] lg:w-auto pl-4 text-sm border border-black md:border-white focus:border-secondary outline-0 py-2"
           type="text"
         />
 
